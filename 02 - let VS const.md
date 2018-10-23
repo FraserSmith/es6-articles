@@ -1,4 +1,4 @@
-In the last post we learned all about how scoping works with [JavaScript let, const and var variables](http://wesbos.com/javascript-scoping/).
+In the last post, we learned all about how scoping works with [JavaScript let, const and var variables](http://wesbos.com/javascript-scoping/).
 
 We now know that `var` is **function scope**, and now we know that `let` and `const` are **block scope**, which means any time you've got a set of curly brackets you have block scope.
 
