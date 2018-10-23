@@ -1,7 +1,7 @@
 There are a couple new ways to declare variables in ES6 that help us out with scoping. We can declare variables with `var`, which we've always used, but now we can use `let` and `const`
 to declare variables too.
 
-These two have some attributes about them which are going to be helpful for us in creating variables but let's do a quick review to show you  how `var`, `let`, and `const` are different.
+These two have some attributes about them which are going to be helpful for us in creating variables but let's do a quick review to show you how `var`, `let`, and `const` are different.
 
 Firstly, `var` variables can be **redefined** or **updated**. Let's use console.log to show the width which we can update the width to be 200, and then we'll console log the width again.
 
@@ -54,7 +54,7 @@ setWidth();
 console.log(width);
 ```
 
-Generally, it's probably not what you want to do. You want to keep your variables inside of your function. If you need something outside of a function, you want to return it and store that in a variable. That's something that we need to know about function scoping. But I'm going to show you a use case where function scoping sort of comes back and bites us.
+Generally, it's probably not what you want to do. You want to keep your variables inside your function. If you need something outside of a function, you want to return it and store that in a variable. That's something that we need to know about function scoping. But I'm going to show you a use case where function scoping sort of comes back and bites us.
 
 Let's say we have an age variable and we have an if statement. We want to create a number of dog years. If they are greater than 12, let's calculate their ages in dog years and show "You are (however many) dog years old" in the console if they're older than 12.
 
@@ -71,7 +71,7 @@ Just as an aside, you can see I'm using back ticks in this example, but I'm goin
 
 The one thing that is a little bit strange here is that `var dogYears` is just a temporary variable, and I just needed this real quick in order to calculate something and then stick it into a `console.log` or stick it into a string or whatever. If you go to your browser console and call `dogYears`, you'll see that it's leaked outside of the if statement and it is now a global variable that lives on `window`, which isn't really what we want.
 
-Even though this was a temporary variable that I only needed inside of one if statement, because `var` variables are **function scoped** and remember, there's no function here, it's going to be **globally scoped**. It's scoped to the entire window, which is a little bit of a pain here. That is one of the benefits to using `let` and `const`. Instead of being scoped to the function, it is **block scoped**, which is something new.
+Even though this was a temporary variable that I only needed inside of one if statement, because `var` variables are **function scoped** and remember, there's no function here, it's going to be **globally scoped**. It's scoped to the entire window, which is a little bit of a pain here. That is one of the benefits of using `let` and `const`. Instead of being scoped to the function, it is **block scoped**, which is something new.
 
 What is a block? Here is a great example:
 
